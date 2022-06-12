@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Matrix</title>
+    <style>
+        body{
+            font-family: 'Roboto', sans-serif;
+            font-size: 14px;
+            color: #6fc27c;
+            background: #0f4d19;
+            text-align: center;
+        }
+        h1{
+            font-size: 35px;
+            color: #9de7a8;
+        }
+        span{
+            font-size: 25px;
+            font-weight: bold;
+        }
+    </style>
+</head>
+
+<body>
+
+    <h1>&#x2774; Sum Of 3 Dimensional Matrix &#x2775;</h1>
+    <br>
+
+    <script>
+        let arr1 = [
+            [0, 0, 0],
+            [0, 0, 0],
+            [0, 0, 0],
+        ];
+
+        let arr2 = [
+            [0, 0, 0],
+            [0, 0, 0],
+            [0, 0, 0],
+        ];
+
+        let result = [
+            [0, 0, 0],
+            [0, 0, 0],
+            [0, 0, 0],
+        ];
+
+        //First Matrix Loop
+        document.write("<h1>First Matrix</h1>");
+        for (let a = 0; a < 3; a++) {
+            for (let b = 0; b < 3; b++) {
+                arr1[a][b] = Number(
+                    prompt(
+                        `Enter Number for Row: ${a + 1} Value: ${b + 1} For 1st Matrix`
+                    )
+                );
+                // document.write(arr1[a][b], " ");
+                document.write(`<span>${arr1[a][b]}</span> `);
+            }
+            document.write("<br>");
+        }
+
+        document.write("<br>");
+
+        //Secound Matrix Loop
+        document.write("<h1>Second Matrix</h1>");
+        for (let a = 0; a < 3; a++) {
+            for (let b = 0; b < 3; b++) {
+                arr2[a][b] = Number(
+                    prompt(
+                        `Enter Number for Row: ${a + 1} Value: ${b + 1} For 2nd Matrix`
+                    )
+                );
+                document.write(`<span>${arr2[a][b]}</span> `);
+            }
+            document.write("<br>");
+        }
+
+        document.write("<br>");
+
+        //Let's Sum first matrix with second matrix.
+        document.write("<h1>Sum Matrix</h1>");
+        for (let a = 0; a < 3; a++) {
+            for (let b = 0; b < 3; b++) {
+                result[a][b] = arr1[a][b] + arr2[a][b];
+                document.write(`<span>${result[a][b]}</span> `);
+            }
+            document.write("<br>");
+        }
+    </script>
+
+</body>
+
+</html>
